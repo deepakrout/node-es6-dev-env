@@ -21,6 +21,14 @@ app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'../src/index.html'));
 })
 
+app.get('/users', function (req, res, next) {
+    var users = [{"id": 1, "firstName": "Bob","lastName": "Smith","email":"bob@gmail.com"},
+    {"id": 2, "firstName": "Brian","lastName": "Smith","email":"brian@gmail.com"},
+    {"id": 3, "firstName": "Dev","lastName": "Smith","email":"dev@gmail.com"}];
+
+    res.json(users);
+});
+
 app.listen(port,function(err){
     if(err){
         console.log(err)
