@@ -1,4 +1,4 @@
-
+import './index.css'
 import {getUsers} from './services/user-service'
 
 let resultElem = document.querySelector('.result')

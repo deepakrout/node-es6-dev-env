@@ -1,5 +1,4 @@
 import 'whatwg-fetch'
-import { get } from 'https';
 import getBaseUrl from './baseUrl'
 
 const baseUrl = getBaseUrl()
@@ -28,5 +27,5 @@ function onSuccess(response){
 }
 
 function onError(error){
-    console.log(error)
+    console.log(error) //eslint-disable-line no-console
 }
